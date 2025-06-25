@@ -13,8 +13,8 @@ function DetailsOfATasks() {
   }
 
   return (
-    <div className="w-screen h-screen bg-sky-950 justify-center items-center flex pb-96">
-      <div className="w-[500px] space-y-4">
+    <div className="w-screen h-screen bg-sky-950 p-8">
+      <div className="w-[500px] mx-auto space-y-4">
         <div className="flex justify-center relative mb-6">
           <button
             onClick={BackBottonClick}

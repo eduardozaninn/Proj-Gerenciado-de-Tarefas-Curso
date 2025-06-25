@@ -1,4 +1,4 @@
-import { ChevronRightIcon, Trash2Icon } from "lucide-react";
+import { CheckCheckIcon, CheckIcon, ChevronRightIcon, ListCheckIcon, SquareCheckBigIcon, SquareCheckIcon, Trash2Icon } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ButtonsTasks from "./ButtonsTasks";
 
@@ -15,9 +15,10 @@ function Tasks({ tasks, OnTaskClick, OnDeleteTasks }) {
         <li key={task.id} className="flex">
           <button
             onClick={() => OnTaskClick(task.id)}
-            className={`bg-slate-700 text-white p-2 rounded-md text-left w-full transition-transform duration-600 ease-in-out transform hover:scale-105 ${task.isCompleted && "line-through"
+            className={`bg-slate-700 text-white p-2 rounded-md text-left w-full flex items-center gap-4 transition-transform duration-600 ease-in-out transform hover:scale-105 ${task.isCompleted && "line-through"
               } `}
           >
+            {task.isCompleted && <SquareCheckBigIcon/>}
             {task.title}
           </button>
 
